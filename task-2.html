@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>linear search</title>
+</head>
+
+<body>
+    <script>
+        function linear() {
+            let arr = [34, 65, 29, 87, 56, 44, 456, 12, 7, 3, 98]
+            let target = 44
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == target) {
+                    return { index: i, value: target };
+                }
+            }
+            return { index: -1, value: "Not found" };
+        }
+        const result = linear();
+        console.log("target :-", result.value, "Index :-", result.index);
+    </script>
+</body>
+
+</html>

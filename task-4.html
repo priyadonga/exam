@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set-map</title>
+</head>
+
+<body>
+    <script>
+        const result = new Map()
+        result.set("t-shirt", 1200)
+        result.set("jeans", 1500)
+        result.set("shirt", 2000)
+
+        console.log(result);
+        
+        
+        result.forEach(element => {
+            console.log(element);
+        });
+
+        const clothes = result.get("t-shirt")
+        console.log("t-shirt =",clothes);
+
+
+
+        const  fruits = new Set()
+        fruits.add("apple")
+        fruits.add("banana")
+        fruits.add("orange")
+
+        console.log(fruits);
+
+        fruits.forEach((e) => {
+            console.log(e);
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marge short</title>
+</head>
+<body>
+    <script>
+          let arr = [21, 45, 67, 83, 23, 10, 43, 56, 78];
+        console.log("Original Array:", arr);
+        let middleIndex = Math.floor(arr.length / 2);
+        let middleNumber = arr[middleIndex];
+        let leftArray = arr.slice(0, middleIndex);
+        let leftLeftArray = leftArray.slice(0, Math.floor(leftArray.length / 2));
+        let leftRightArray = leftArray.slice(Math.floor(leftArray.length / 2));
+        let rightArray = arr.slice(middleIndex + 1);
+        let rightLeftArray = rightArray.slice(0, Math.floor(rightArray.length / 2));
+        let rightRightArray = rightArray.slice(Math.floor(rightArray.length / 2));
+
+        console.log("Middle Number:", middleNumber);
+        console.log("Left Array:", leftArray);
+        console.log("Left Left Array:", leftLeftArray);
+        console.log("Left Right Array:", leftRightArray);
+        console.log("Right Array:", rightArray);
+        console.log("Right Left Array:", rightLeftArray);
+        console.log("Right Right Array:", rightRightArray);
+
+        let mergedArray = [];
+        for (let i = 0; i < leftLeftArray.length; i++) {
+            mergedArray.push(leftLeftArray[i]);
+        }
+        for (let i = 0; i < leftRightArray.length; i++) {
+            mergedArray.push(leftRightArray[i]);
+        }
+        mergedArray.push(middleNumber);
+        for (let i = 0; i < rightLeftArray.length; i++) {
+            mergedArray.push(rightLeftArray[i]);
+        }
+        for (let i = 0; i < rightRightArray.length; i++) {
+            mergedArray.push(rightRightArray[i]);
+        }
+
+        console.log("Merged Array:", mergedArray);
+
+    </script>
+</body>
+</html>
